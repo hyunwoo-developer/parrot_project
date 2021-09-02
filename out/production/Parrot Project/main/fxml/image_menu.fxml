@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ImageMenuController">
+   <children>
+      <Button fx:id="createBtn" alignment="CENTER" layoutX="40.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#onCreateBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="37.5" prefWidth="400.0" style="-fx-background-color: #5F666666; -fx-background-radius: 0;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="68.0" layoutY="120.0" prefHeight="27.0" prefWidth="34.0" text="Src" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="srcField" disable="true" layoutX="117.0" layoutY="120.0" prefHeight="29.1" prefWidth="254.85" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font></TextField>
+      <Button fx:id="srcBtn" layoutX="381.0" layoutY="115.0" mnemonicParsing="false" onAction="#srcBtnOnAction" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="27.1" prefWidth="27.1" style="-fx-background-radius: 0; -fx-background-color: #00000000;">
+          <graphic>
+              <ImageView fitHeight="27.1" fitWidth="27.1" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../res/src_btn.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+   </children>
+</Pane>

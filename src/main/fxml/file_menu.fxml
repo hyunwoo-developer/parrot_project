@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" style="-fx-background-color: #232B33;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FileMenuController">
+   <children>
+      <Button fx:id="newFileBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onNewFileBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="150.0" prefWidth="240.0" style="-fx-background-color: #00000000; -fx-background-radius: 0; -fx-background-insets: 0;" text="New file" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="openFileBtn" contentDisplay="CENTER" layoutX="240.0" mnemonicParsing="false" onAction="#onOpenFileBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="150.0" prefWidth="240.0" style="-fx-background-color: #00000000; -fx-background-radius: 0; -fx-background-insets: 0;" text="Open file" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveFileBtn" contentDisplay="CENTER" layoutY="150.0" mnemonicParsing="false" onAction="#onSaveFileBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="150.0" prefWidth="240.0" style="-fx-background-color: #00000000; -fx-background-radius: 0; -fx-background-insets: 0;" text="Save file" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="exportToImgBtn" contentDisplay="CENTER" layoutX="240.0" layoutY="150.0" mnemonicParsing="false" onAction="#onExportToImgBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="150.0" prefWidth="240.0" style="-fx-background-color: #00000000; -fx-background-radius: 0; -fx-background-insets: 0;" text="Export to Image" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="210.0" layoutX="240.0" layoutY="150.0" startX="-210.0" stroke="#ffffff66" strokeLineCap="ROUND" strokeWidth="2.0" />
+      <Line endY="120.0" layoutX="240.0" layoutY="150.0" startY="-120.0" stroke="#ffffff66" strokeLineCap="ROUND" strokeWidth="2.0" />
+   </children>
+</Pane>

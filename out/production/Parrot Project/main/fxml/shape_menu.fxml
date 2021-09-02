@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ShapeMenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="158.0" layoutY="10.0" prefHeight="34.0" prefWidth="59.4" text="Color" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="inputColor" layoutX="240.0" layoutY="14.0" style="-fx-background-radius: 0; -fx-background-color: #FFFFFF;" />
+      <Pane fx:id="displayPane" layoutX="22.0" layoutY="55.0" prefHeight="233.0" prefWidth="436.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button fx:id="nUpBtn" alignment="CENTER" layoutX="382.0" layoutY="129.0" mnemonicParsing="false" onAction="#nUpBtnOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: ffffffff;">
+                <graphic>
+                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@res_Btn/up_arrow.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Label fx:id="nSides" alignment="CENTER" layoutX="384.0" layoutY="161.0" prefHeight="17.0" prefWidth="25.0" text="3" />
+            <Button fx:id="nDownBtn" alignment="CENTER" layoutX="382.0" layoutY="182.0" mnemonicParsing="false" onAction="#nDownBtnOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: ffffffff;">
+                <graphic>
+                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@res_Btn/down_arrow.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <VBox fx:id="nPoly_Area" alignment="CENTER" layoutX="297.0" layoutY="129.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0" />
+            <VBox fx:id="line_Area" alignment="CENTER" layoutX="59.0" layoutY="25.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0">
+               <children>
+                  <Line endX="80.0" strokeWidth="3.0">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Line>
+               </children>
+            </VBox>
+            <VBox fx:id="arrow_Area" alignment="CENTER" layoutX="178.0" layoutY="25.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0">
+               <children>
+                  <SVGPath content="M 0 0 L 48 24  0 48  16 24 Z">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect></SVGPath>
+               </children>
+            </VBox>
+            <VBox fx:id="star_Area" alignment="CENTER" layoutX="297.0" layoutY="25.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0">
+               <children>
+                  <SVGPath content="M 38.95325393049076 0.0 L 50.06727772493867 36.29145444216548  61.84940211963704 72.3599986226671  32.084409473746874 49.70773601457663  1.9065079489977137 27.639060047963262  38.95325393049076 27.999736427776504  75.99999991198379 27.639060047963248  45.82209838723465 49.70773601457663  16.057105741344486 72.35999862266712  27.83923013604285 36.29145444216548  Z">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect></SVGPath>
+               </children>
+            </VBox>
+            <VBox fx:id="circle_Area" alignment="CENTER" layoutX="59.0" layoutY="129.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0">
+               <children>
+                  <Ellipse radiusX="40.0" radiusY="40.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Ellipse>
+               </children>
+            </VBox>
+            <VBox fx:id="rect_Area" alignment="CENTER" layoutX="178.0" layoutY="129.0" onDragDetected="#onAreaDragDetected" onMouseDragged="#onAreaDragged" onMouseEntered="#onAreaEntered" onMouseExited="#onAreaExited" onMousePressed="#onAreaPressed" onMouseReleased="#onAreaReleased" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: ffffffff;">
+               <children>
+                  <Rectangle height="80.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="80.0">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect></Rectangle>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

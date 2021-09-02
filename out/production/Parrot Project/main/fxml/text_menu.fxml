@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.TextMenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="40.35" layoutY="17.0" text="Text" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="40.35" layoutY="89.55" text="Color" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="40.35" layoutY="140.75" text="Size" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="40.35" layoutY="194.25" text="Link" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputLink" layoutX="124.35" layoutY="194.25" prefHeight="28.0" prefWidth="282.0" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="inputText" layoutX="124.35" layoutY="17.0" prefHeight="49.35" prefWidth="315.3" style="-fx-background-radius: 0;" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font></TextArea>
+      <Button fx:id="createBtn" alignment="CENTER" layoutX="40.0" layoutY="242.0" mnemonicParsing="false" onAction="#onCreateBtnClicked" onMouseEntered="#onBtnEntered" onMouseExited="#onBtnExited" prefHeight="37.5" prefWidth="400.0" style="-fx-background-color: #5F666666; -fx-background-radius: 0;" text="Create" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="checkImage" fitHeight="19.0" fitWidth="24.0" layoutX="418.95" layoutY="199.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/unchecked.png" />
+         </image>
+      </ImageView>
+      <ColorPicker fx:id="inputColor" layoutX="124.35" layoutY="89.0" prefHeight="28.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" />
+      <TextField fx:id="inputSize" editable="false" layoutX="122.0" layoutY="137.0" onKeyPressed="#onInputSizeKeypressed" prefHeight="32.0" prefWidth="315.3" style="-fx-background-color: #00000000; -fx-text-fill: #FF9900; -fx-padding: 0;" text="10pt">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>
